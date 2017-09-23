@@ -1,0 +1,23 @@
+{% extends 'smedia/base_ac.html' %}
+{% block title %}Register{% endblock %}
+
+
+{% block body %}
+    <div class="content">
+      <form id='register-form' method='post'>
+        {% csrf_token %}
+        {% for field in form %}
+          <div class="form-group">
+            <div>
+                <span class="text-danger small">{{ field.errors }}</span>
+            </div>
+            {% load tag_ac %}
+            <input id="{{ field.name }}" type="{{field|field_type}}" name="{{ field.name }}" required class="input-material">
+            <label for="{{ field.name }}" class="label-material">{{ field.label }}</label>
+          </div>
+        {% endfor %}
+        <input id="register" type="submit" value="Register" class="btn btn-primary">
+      </form>
+      <small>Already have an account? </small><a href="/smedia/login" class="signup">Login</a>
+    </div>
+{% endblock %}

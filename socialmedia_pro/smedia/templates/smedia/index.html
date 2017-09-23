@@ -1,0 +1,23 @@
+{% extends 'smedia/base.html' %}
+
+
+{% block body %}
+    <section class="projects no-padding-top">
+            <div class="container-fluid">
+              <!-- Project-->
+              {% for lis in lists %}
+                <div class="project">
+                  <div class="row bg-white has-shadow">
+                    <div class="project-title d-flex align-items-center">
+                      <div class="image has-shadow"><img src="{{ lis.user.profile_image_url_https }}" alt="..." class="img-fluid"></div>
+                      <div class="text">
+                        <h3 class="h4">{{ lis.text }}</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </section>
+{% endblock %}
+
