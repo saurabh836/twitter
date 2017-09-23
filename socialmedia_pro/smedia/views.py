@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View, ListView, UpdateView, RedirectView
 from .socialnetwork.tw_search import Twi_Pos
 from .socialnetwork.mytwython import lis_findin_dict as lfd
-from .socialnetwork.fb_search import TwitterTweet
+from .socialnetwork.tw_crawler import TwitterTweet
 from .forms import UserForm, LoginForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
@@ -19,19 +19,21 @@ class IndexView(View):
     # lists = lfd(a, 'text')
 
     def get(self, request):
-        a = self.tp.pos("#lalbaugcharaja")
-        tt = TwitterTweet("#lalbaugcharaja")
-        pst_cnt = tt.get_tweet_month()
+        # a = self.tp.pos("#lalbaugcharaja")
         # pst_cnt = len(a)
-        username = request.session.get('username')
-        return render(request, self.template_name, {'username': username, 'pst_cnt': pst_cnt, 'lists': a})
-        # else:
-        #     return render(request, self.template_name, {'username': username})
-
-    def post(self, request):
-        # request.session['username'] = username
         # username = request.session.get('username')
         return render(request, self.template_name, {})
+
+    def post(self, request):
+        key_w = request.POST.get('search_key')
+        print "search Key = " + key_w
+        tw_output = self.tp.pos(key_w)
+        twitt_list = tw_output['pos_json']
+        usr_cnt = tw_output['sname_cnt']
+        print 'usr_cnt=' + str(usr_cnt)
+        pst_cnt = len(twitt_list)
+        username = request.session.get('username')
+        return render(request, self.template_name, {'key_w': key_w, 'username': username, 'pst_cnt': pst_cnt, 'usr_cnt': usr_cnt, 'lists': twitt_list})
 
 
 class LogoutView(RedirectView):
@@ -51,7 +53,6 @@ class LoginView(View):
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
-        print request.POST
         form = request.POST
         username = form['username']
         password = form['password']
@@ -62,7 +63,6 @@ class LoginView(View):
             login(request, user)
             request.session['username'] = username
             return HttpResponseRedirect('index')
-            # return render(request, 'smedia/index.html', {"username": username})
         else:
             return HttpResponseRedirect("login")
 

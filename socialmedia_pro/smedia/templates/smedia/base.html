@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from demo.bootstrapious.com/admin/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Aug 2017 21:33:20 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,20 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     {% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'smedia/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/smedia/bootstrap.min.css' %}">
     <!-- Google fonts - Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="{% static 'smedia/style.default.css' %}" id="theme-stylesheet">
+    <link rel="stylesheet" href="{% static '/smedia/style.default.css' %}" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="{% static 'smedia/custom.css' %}">
+    <link rel="stylesheet" href="{% static '/smedia/custom.css' %}">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="{% static 'smedia/img/favicon.ico' %}">
+    <link rel="shortcut icon" href="{% static '/smedia/img/favicon.ico' %}">
     <!-- Font Awesome CDN-->
     <!-- you can replace it by local Font Awesome-->
-    <script src="{% static 'smedia/js/99347ac47f.js' %}"></script>
-    <!-- Font Icons CSS-->
-    <link rel="stylesheet" href="{% static 'smedia/js/icons.css' %}">
+    {% load staticfiles %}
+    <script src="{% static '/smedia/js/99347ac47f.js' %}"></script>
+    <!-- Font Icons CSS /smedia/js/99347ac47f.js-->
+    <link rel="stylesheet" href="{% static '/smedia/js/icons.css' %}">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -45,61 +45,61 @@
               <!-- Navbar Header-->
               <div class="navbar-header">
                 <!-- Navbar Brand --><a href="index-2.html" class="navbar-brand">
-                  <div class="brand-text brand-big hidden-lg-down"><span>Bootstrap </span><strong>Dashboard</strong></div>
+                  <div class="brand-text brand-big hidden-lg-down"><strong>HashTag Tracker</strong></div>
                   <div class="brand-text brand-small"><strong>BD</strong></div></a>
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
               </div>
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                <!-- Search-->
-                <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
-                <!-- Notifications-->
-                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red">12</span></a>
-                  <ul aria-labelledby="notifications" class="dropdown-menu">
-                    <li><a rel="nofollow" href="#" class="dropdown-item">
-                        <div class="notification">
-                          <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
-                          <div class="notification-time"><small>4 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item">
-                        <div class="notification">
-                          <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
-                          <div class="notification-time"><small>4 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item">
-                        <div class="notification">
-                          <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server Rebooted</div>
-                          <div class="notification-time"><small>4 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item">
-                        <div class="notification">
-                          <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
-                          <div class="notification-time"><small>10 minutes ago</small></div>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications                                            </strong></a></li>
-                  </ul>
-                </li>
-                <!-- Messages                        -->
-                <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-orange">10</span></a>
-                  <ul aria-labelledby="notifications" class="dropdown-menu">
-                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                        <div class="msg-profile"> <img src="static/smedia/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="msg-body">
-                          <h3 class="h5">Jason Doe</h3><span>Sent You Message</span>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                        <div class="msg-profile"> <img src="static/smedia/img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="msg-body">
-                          <h3 class="h5">Frank Williams</h3><span>Sent You Message</span>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                        <div class="msg-profile"> <img src="static/smedia/img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="msg-body">
-                          <h3 class="h5">Ashley Wood</h3><span>Sent You Message</span>
-                        </div></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Read all messages    </strong></a></li>
-                  </ul>
-                </li>
+                <!--&lt;!&ndash; Search&ndash;&gt;-->
+                <!--<li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>-->
+                <!--&lt;!&ndash; Notifications&ndash;&gt;-->
+                <!--<li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red">12</span></a>-->
+                  <!--<ul aria-labelledby="notifications" class="dropdown-menu">-->
+                    <!--<li><a rel="nofollow" href="#" class="dropdown-item">-->
+                        <!--<div class="notification">-->
+                          <!--<div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>-->
+                          <!--<div class="notification-time"><small>4 minutes ago</small></div>-->
+                        <!--</div></a></li>-->
+                    <!--<li><a rel="nofollow" href="#" class="dropdown-item">-->
+                        <!--<div class="notification">-->
+                          <!--<div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>-->
+                          <!--<div class="notification-time"><small>4 minutes ago</small></div>-->
+                        <!--</div></a></li>-->
+                    <!--<li><a rel="nofollow" href="#" class="dropdown-item">-->
+                        <!--<div class="notification">-->
+                          <!--<div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server Rebooted</div>-->
+                          <!--<div class="notification-time"><small>4 minutes ago</small></div>-->
+                        <!--</div></a></li>-->
+                    <!--<li><a rel="nofollow" href="#" class="dropdown-item">-->
+                        <!--<div class="notification">-->
+                          <!--<div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>-->
+                          <!--<div class="notification-time"><small>10 minutes ago</small></div>-->
+                        <!--</div></a></li>-->
+                    <!--<li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications                                            </strong></a></li>-->
+                  <!--</ul>-->
+                <!--</li>-->
+                <!--&lt;!&ndash; Messages                        &ndash;&gt;-->
+                <!--<li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-orange">10</span></a>-->
+                  <!--<ul aria-labelledby="notifications" class="dropdown-menu">-->
+                    <!--<li><a rel="nofollow" href="#" class="dropdown-item d-flex">-->
+                        <!--<div class="msg-profile"> <img src="static/smedia/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>-->
+                        <!--<div class="msg-body">-->
+                          <!--<h3 class="h5">Jason Doe</h3><span>Sent You Message</span>-->
+                        <!--</div></a></li>-->
+                    <!--<li><a rel="nofollow" href="#" class="dropdown-item d-flex">-->
+                        <!--<div class="msg-profile"> <img src="static/smedia/img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>-->
+                        <!--<div class="msg-body">-->
+                          <!--<h3 class="h5">Frank Williams</h3><span>Sent You Message</span>-->
+                        <!--</div></a></li>-->
+                    <!--<li><a rel="nofollow" href="#" class="dropdown-item d-flex">-->
+                        <!--<div class="msg-profile"> <img src="static/smedia/img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>-->
+                        <!--<div class="msg-body">-->
+                          <!--<h3 class="h5">Ashley Wood</h3><span>Sent You Message</span>-->
+                        <!--</div></a></li>-->
+                    <!--<li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Read all messages    </strong></a></li>-->
+                  <!--</ul>-->
+                <!--</li>-->
                 <!-- Logout    -->
                 <li class="nav-item"><a href="logout" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
               </ul>
@@ -124,26 +124,17 @@
                   {% csrf_token %}
                   <ul class="list-unstyled components">
                       <li>
-                          <div class="row">
-                            <h2>Slider Search box</h2>
-                            <div class="search">
-                          <input type="text" class="form-control input-sm" maxlength="64" placeholder="Search" />
-                          <button type="submit" class="btn btn-primary btn-xl">Search</button>
+                          <h2>Search Hashtag</h2>
+                            <div class="form-group">
+                              <input name="search_key" type="text" class="form-control" placeholder="Search">
                             </div>
-                          </div>
-                      <!--</li>-->
-                      <!--<li><div class="form-group">-->
-                          <!--<label for="usr">Add HashTag</label>-->
-                          <!--<input type="text" class="form-control" id="usr">-->
-                      <!--</div></li>-->
-                      <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse" class="collapsed"> <i class="icon-interface-windows"></i>Dropdown </a>
-                          <ul id="dashvariants" class="list-unstyled collapse" aria-expanded="false" style="">
-                            <li><a href="#">Page</a></li>
-                            <li><a href="#">Page</a></li>
-                            <li><a href="#">Page</a></li>
-                            <li><a href="#">Page</a></li>
-                          </ul>
-                    </li>
+                            <button type="submit" class="btn btn-primary btn-xl">Submit</button>
+                        <!--<h2>Slider Search box</h2>-->
+                        <!--<div class="search">-->
+                            <!--<input type="text" class="form-control input-sm" maxlength="64" placeholder="Search" />-->
+                            <!--<button type="submit" class="btn btn-primary btn-xl">Search</button>-->
+                        <!--</div>-->
+                      </li>
                   </ul>
               </form>
             </li>
@@ -153,7 +144,13 @@
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Dashboard</h2>
+              <h2 class="no-margin-bottom">
+                  {% if key_w %}
+                    #{{ key_w }}
+                  {% else %}
+                    Dashboard
+                  {% endif %}
+              </h2>
             </div>
           </header>
           <!-- Dashboard Counts Section-->
@@ -181,7 +178,7 @@
                         <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>70</strong></div>
+                    <div class="number"><strong>{{ usr_cnt }}</strong></div>
                   </div>
                 </div>
                 <!-- Item -->
@@ -193,7 +190,7 @@
                         <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>44</strong></div>
+                    <div class="number"><strong>-</strong></div>
                   </div>
                 </div>
                 <!-- Item -->
@@ -205,7 +202,7 @@
                         <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>35</strong></div>
+                    <div class="number"><strong>-</strong></div>
                   </div>
                 </div>
               </div>
@@ -222,10 +219,10 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-sm-6">
-                  <p>Your company &copy; 2017-2019</p>
+                  <p>Sample Template &copy; 2017-2019</p>
                 </div>
                 <div class="col-sm-6 text-right">
-                  <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">Bootstrapious</a></p>
+                  <p>Design by <a href="saurabh.sathe836@gmail.com" class="external">Bootstrapious</a></p>
                   <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
                 </div>
               </div>
@@ -235,8 +232,8 @@
       </div>
     </div>
     <!-- Javascript files-->
-    <script src="{% static 'smedia/js/jquery.min.js' %}"></script>
-    <script src="{% static 'smedia/js/tether.min.js' %}"></script>
+    <script src="{% static '/smedia/js/jquery.min.js' %}"></script>
+    <script src="{% static '/smedia/js/tether.min.js' %}"></script>
     <script src="{% static 'smedia/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'smedia/js/jquery.cookie.js' %}"> </script>
     <script src="{% static 'smedia/js/jquery.validate.min.js' %}"></script>
@@ -255,5 +252,4 @@
     </script>
   </body>
 
-<!-- Mirrored from demo.bootstrapious.com/admin/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Aug 2017 21:33:43 GMT -->
 </html>

@@ -33,5 +33,5 @@ class TwitterTweet:
         return tweet
 
 
-tt = TwitterTweet("#lalbaugcharaja")
-pprint.pprint(tt.get_tweet_month())
+# tt = TwitterTweet("#lalbaugcharaja")
+# pprint.pprint(tt.get_tweet_month())
