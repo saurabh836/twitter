@@ -45,7 +45,7 @@ class Twi_Pos:
         auth = tweepy.auth.OAuthHandler(self.consumer_key, self.consumer_secret)
         auth.set_access_token(self.access_key, self.access_secret)
         api = tweepy.API(auth)
-        src_key += ' -filter:retweets AND -filter:replies'
+        # src_key += ' -filter:retweets AND -filter:replies'
         search_results = api.search(q=src_key, count=100)  # , until="2017-09-23 21:57:02")
         sr = []
         for k, i in enumerate(search_results):
@@ -56,9 +56,9 @@ class Twi_Pos:
 
 # pprint.pprint()
 # lfd = mytwython.lis_findin_dict
-# t = Twi_Pos()
-# a = t.pos("#python")
-# pprint.pprint(a['sname_cnt'])
+t = Twi_Pos()
+a = t.pos("#python")
+pprint.pprint(a['pos_json'][0])
 # a1 = a[0]
 # for a1 in a:
 #     pprint.pprint(a1['created_at'] + "|" + a1['text'])

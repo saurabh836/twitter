@@ -11,6 +11,13 @@
                     <div class="project-title d-flex align-items-center">
                       <div class="image has-shadow"><img src="{{ lis.user.profile_image_url_https }}" alt="..." class="img-fluid"></div>
                       <div class="text">
+                        <a href="https://twitter.com/{{ lis.user.screen_name }}">
+                            <span class="FillNameGroup"><strong>{{ lis.user.name }}</strong></span><br>
+                        </a>
+                        <a href="https://twitter.com/{{ lis.user.screen_name }}">
+                            <span class="FillNameGroup"><strong>@{{ lis.user.screen_name }}</strong></span><br>
+                        </a>
+                        <span>{{ lis.created_at }}</span>
                         <h3 class="h4">{{ lis.text }}</h3>
                       </div>
                     </div>

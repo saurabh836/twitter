@@ -802,9 +802,9 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 }
 .project .image {
     max-width: 50px;
-    min-width: 50px;
     height: 50px;
-    margin-right: 15px
+    margin-right: 15px;
+    margin-left: 10px;
 }
 .project .time,
 .project .comments,
